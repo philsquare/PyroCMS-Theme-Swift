@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h2>Recent Posts</h2>
+		
+		{{ blog:posts limit="5" }}
+
+		<div class="post-summary">
+			<h3 class="media-heading"><a href="{{ url }}">{{ title }}</a></h3>
+			<div class="meta">
+				<span class="date">{{ helper:date format="M d, Y" timestamp=created }}</span>
+			</div>
+			{{ if category }}
+			<div class="category">
+				<abbr title="Category">C:</abbr> <a href="{{ url:site }}blog/category/{{ category:slug }}">{{ category:title }}</a>
+			</div>
+			{{ endif }}
+			<p>{{ intro }} <a href="{{ url }}" title="Read more about: {{ title }}">Read more</a></p>
+		</div>
+
+		{{ /blog:posts }}
+		<a href="{{ url:site uri="blog" }}" class="btn btn-default">View More</a>
+	</div>
+</div>
