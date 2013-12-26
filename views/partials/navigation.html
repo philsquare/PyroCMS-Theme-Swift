@@ -14,28 +14,8 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav navbar-right">
 
-			{{ navigation:links group="header" class="active" }}
+			{{ navigation:links group="header" }}
 
-			{{ if children }}
-
-			<li class="dropdown {{ class }}">
-				<a href="{{ url }}" class="{{ class }} dropdown-toggle" data-toggle="dropdown">{{ title }} <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					{{ children }}
-					<li><a href="{{ url }}">{{ title }}</a></li>
-					{{ /children }}
-				</ul>
-			</li>
-
-			{{ else }}
-
-			<li class="{{ class }}">
-				<a href="{{ url }}" class="{{ class }}">{{ title }}</a>
-			</li>
-
-			{{ endif }}
-
-			{{ /navigation:links }}
 
 		</ul>
 	</div><!-- /.navbar-collapse -->

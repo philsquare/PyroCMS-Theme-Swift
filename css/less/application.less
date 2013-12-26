@@ -51,7 +51,7 @@ header.container {
     -o-border-radius: 5px 5px 5px 5px;
 }
 
-navbar-nav > li > a:hover {
+.navbar-nav > li > a:hover {
 	background-color:#fff;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #fff));
 	background:-webkit-linear-gradient(top, #fff 0%, #fff 100%);
@@ -60,6 +60,94 @@ navbar-nav > li > a:hover {
 	background:-ms-linear-gradient(top, #fff 0%, #fff 100%);
 	background:linear-gradient(top, #fff 0%, #fff 100%);
 }
+
+ul.navbar-nav li {
+	position: relative;
+	list-style: none;
+}
+
+ul.navbar-nav li ul {
+	padding-left: 0;
+	left: -84px;
+}
+
+ul.navbar-nav li:hover ul {
+	top: 35px;
+	opacity: 1;
+	z-index: 1000;
+}
+
+ul.navbar-nav li ul {
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	top: 45px;
+	opacity: 0;
+	margin-left: 20px;
+	padding-top: 20px;
+	position: absolute;
+	z-index: -1000;
+	width: 180px;
+}
+
+ul.navbar-nav li ul:after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent transparent #0199e7;
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    display: block;
+    right: 20px;
+    position: absolute;
+    top: 0px;
+    width: 0;
+}
+
+ul.navbar-nav li ul li {
+	float: none;
+}
+
+ul.navbar-nav li ul li.current a {
+	color: #fff!important;
+}
+
+ul.navbar-nav li ul li:last-child a {
+	border: none;	
+}
+
+ul.navbar-nav li ul li a {
+	padding: 9px 14px;
+	color: rgba(255,255,255,0.75)!important;
+	font-size: 12px;
+	background-color: #0199e7;
+	border-bottom: 1px solid rgba(255,255,255,0.15);
+	display: block;
+}
+
+ul.navbar-nav li ul li a:hover {
+	color: rgba(255,255,255,1)!important;
+}
+
+ul.navbar-nav li.current li a {
+	color: rgba(255,255,255,0.75)!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 section .container {
 	background-image: url("../img/bg-2.gif");
