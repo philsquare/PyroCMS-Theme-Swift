@@ -8,17 +8,24 @@
 
 <body class="{{ url:segments segment="1" default="home" }}">
 
-	<header>
-		{{ theme:partial name="navigation" }}
-		{{ theme:partial name="header" }}
-	</header>
+		<header class="container">
+			<div class="row">
+				<div class="col-xs-12">
+			{{ theme:partial name="header" }}
+		
+			{{ theme:partial name="navigation" }}
+			</div>
+			</div>
+		</header>
 	
 	<section>	
 		{{ theme:partial name="content" }}
 	</section>		
 		
 	<footer>
-		{{ theme:partial name="footer" }}
+		<div class="container">
+			{{ theme:partial name="footer" }}
+		</div>
 	</footer>
 	
 </body>

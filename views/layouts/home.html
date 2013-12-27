@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="{{ lang:code }}">
+
+<head>
+	{{ theme:partial name="metadata" }}
+</head>
+
+<body class="{{ url:segments segment="1" default="home" }}">
+
+	<header class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				{{ theme:partial name="header" }}
+
+				{{ theme:partial name="navigation" }}
+			</div>
+		</div>
+	</header>
+	
+	
+	<section>
+		<div class="container">
+			{{ theme:partial name="home/slider" }}
+			
+			{{ theme:partial name="home/posts" }}
+		</div>
+	</section>		
+		
+	<footer>
+		<div class="container">
+			{{ theme:partial name="footer" }}
+		</div>
+	</footer>
+	
+</body>
+</html>
